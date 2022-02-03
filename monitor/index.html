@@ -1,0 +1,451 @@
+<!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.01 Transitional//EN http://www.w3.org/TR/html4/loose.dtd>
+<html>
+<META http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css integrity=sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z crossorigin=anonymous>
+<script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity=sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
+<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js integrity=sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV crossorigin=anonymous></script>
+   <style type=text/css media=screen>
+  * {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  body, html {
+    padding: 3px 3px 3px 3px;
+    background-color: #D8DBE2;
+    font-family: Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: center;
+  }
+  div.main_page {
+    position: relative;
+    display: table;
+    width: 800px;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 0px 0px;
+    border-width: 2px;
+    border-color: #212738;
+    border-style: solid;
+    background-color: #FFFFFF;
+    text-align: center;
+  }
+  div.page_header {
+    height: 99px;
+    width: 100%;
+    background-color: #F5F6F7;
+  }
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+    font-size: 180%;
+    font-weight: bold;
+  }
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+    border: 0px 0px 0px;
+  }
+  div.table_of_contents {
+    clear: left;
+    min-width: 200px;
+    margin: 3px 3px 3px 3px;
+    background-color: #FFFFFF;
+    text-align: left;
+  }
+  div.table_of_contents_item {
+    clear: left;
+    width: 100%;
+    margin: 4px 0px 0px 0px;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: left;
+  }
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+    background-color: #FFFFFF;
+    text-align: left;
+  }
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+    color: #000000;
+    font-size: 100%;
+  }
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+    padding: 8px 8px 8px 8px;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+    background-color: #F5F6F7;
+    font-style: italic;
+  }
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+    background-color: #8E9CB2;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+  }
+  div.section_header_red {
+    background-color: #CD214F;
+  }
+  div.section_header_grey {
+    background-color: #9F9386;
+  }
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+  div.table_of_contents_item a,
+  div.content_section_text a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  div.table_of_contents_item a:link,
+  div.table_of_contents_item a:visited,
+  div.table_of_contents_item a:active {
+    color: #000000;
+  }
+  div.table_of_contents_item a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+  div.content_section_text a:link,
+  div.content_section_text a:visited,
+   div.content_section_text a:active {
+    background-color: #DCDFE6;
+    color: #000000;
+  }
+  div.content_section_text a:hover {
+    background-color: #000000;
+    color: #DCDFE6;
+  }
+  div.validator {
+  }
+    </style>
+<body>
+<fieldset>
+<center>
+<h2>Reporte de Servidor Linux
+<h3><legend>Script modificado por Jacg </legend></h3>
+</center>
+</fieldset>
+<br>
+<center>
+<h2>Detalles Sistema Operativo : </h2>
+<table class=table>
+<thead class='thead-dark'>
+<tr>
+<th>Nombre S.O</th>
+<th>Versión O.S</th>
+<th>Dirección IP</th>
+<th>Tiempo ejecución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu</td>
+<td>Ubuntu 21.10
+ </td>
+<td>192.168.0.42</td>
+<td> 15:05:33 up 18:50,  2 users,  load average: 0.01, 0.02, 0.00</td>
+</tr>
+</tbody>
+</table>
+<h2>Utilización de recursos : </h2>
+<br>
+Uso informacion de la CPU para HOST: <strong>testjacgaplk</strong><br>
+Última actualización: <strong>Wed Feb  2 15:05:33 UTC 2022</strong><br><br>
+<table class='table' border='1'>
+<thead class='thead-dark'>
+<tr>
+<th >Caracteristica</th>
+<th >Valor</th>
+</tr>
+</thead>
+<tr><td align='center'>
+processor 
+</td><td align='center'>
+ 0
+</td></tr>
+<tr><td align='center'>
+vendor_id 
+</td><td align='center'>
+ GenuineIntel
+</td></tr>
+<tr><td align='center'>
+cpu family 
+</td><td align='center'>
+ 6
+</td></tr>
+<tr><td align='center'>
+model 
+</td><td align='center'>
+ 126
+</td></tr>
+<tr><td align='center'>
+model name 
+</td><td align='center'>
+ Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+</td></tr>
+<tr><td align='center'>
+stepping 
+</td><td align='center'>
+ 5
+</td></tr>
+<tr><td align='center'>
+cpu MHz 
+</td><td align='center'>
+ 1190.399
+</td></tr>
+<tr><td align='center'>
+cache size 
+</td><td align='center'>
+ 6144 KB
+</td></tr>
+<tr><td align='center'>
+physical id 
+</td><td align='center'>
+ 0
+</td></tr>
+<tr><td align='center'>
+siblings 
+</td><td align='center'>
+ 1
+</td></tr>
+<tr><td align='center'>
+core id 
+</td><td align='center'>
+ 0
+</td></tr>
+<tr><td align='center'>
+cpu cores 
+</td><td align='center'>
+ 1
+</td></tr>
+<tr><td align='center'>
+apicid 
+</td><td align='center'>
+ 0
+</td></tr>
+<tr><td align='center'>
+initial apicid 
+</td><td align='center'>
+ 0
+</td></tr>
+<tr><td align='center'>
+fpu 
+</td><td align='center'>
+ yes
+</td></tr>
+<tr><td align='center'>
+fpu_exception 
+</td><td align='center'>
+ yes
+</td></tr>
+<tr><td align='center'>
+cpuid level 
+</td><td align='center'>
+ 22
+</td></tr>
+<tr><td align='center'>
+wp 
+</td><td align='center'>
+ yes
+</td></tr>
+<tr><td align='center'>
+flags 
+</td><td align='center'>
+ fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase avx2 invpcid rdseed clflushopt md_clear flush_l1d arch_capabilities
+</td></tr>
+<tr><td align='center'>
+bugs 
+</td><td align='center'>
+ cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+</td></tr>
+<tr><td align='center'>
+bogomips 
+</td><td align='center'>
+ 2380.79
+</td></tr>
+<tr><td align='center'>
+clflush size 
+</td><td align='center'>
+ 64
+</td></tr>
+<tr><td align='center'>
+cache_alignment 
+</td><td align='center'>
+ 64
+</td></tr>
+<tr><td align='center'>
+address sizes 
+</td><td align='center'>
+ 39 bits physical, 48 bits virtual
+</td></tr>
+<tr><td align='center'>
+power management
+</td><td align='center'>
+
+</td></tr>
+<tr><td align='center'>
+
+</td><td align='center'>
+
+</td></tr>
+</table>
+Uso de RAM para HOST: <strong>testjacgaplk</strong><br>
+Última actualización: <strong>Wed Feb  2 15:05:33 UTC 2022</strong><br><br>
+<table class='table' border='1'>
+<thead class='thead-dark'>
+<tr>
+<th >Tipo</th>
+<th >Total</th>
+<th >Usada</th>
+<th >Libre</th>
+<th >Compartida</th>
+<th >Buff/Cache</th>
+<th >Disponible</th>
+</tr>
+</thead>
+<tr><td align='center'>
+Mem:
+</td><td align='center'>
+1.9Gi
+</td><td align='center'>
+178Mi
+</td><td align='center'>
+1.0Gi
+</td><td align='center'>
+2.0Mi
+</td><td align='center'>
+753Mi
+</td><td align='center'>
+1.6Gi
+</td></tr>
+<tr><td align='center'>
+Low:
+</td><td align='center'>
+1.9Gi
+</td><td align='center'>
+931Mi
+</td><td align='center'>
+1.0Gi
+</td><td align='center'>
+
+</td><td align='center'>
+
+</td><td align='center'>
+
+</td></tr>
+<tr><td align='center'>
+High:
+</td><td align='center'>
+0B
+</td><td align='center'>
+0B
+</td><td align='center'>
+0B
+</td><td align='center'>
+
+</td><td align='center'>
+
+</td><td align='center'>
+
+</td></tr>
+<tr><td align='center'>
+Swap:
+</td><td align='center'>
+1.6Gi
+</td><td align='center'>
+0B
+</td><td align='center'>
+1.6Gi
+</td><td align='center'>
+
+</td><td align='center'>
+
+</td><td align='center'>
+
+</td></tr>
+<tr><td align='center'>
+Total:
+</td><td align='center'>
+3.6Gi
+</td><td align='center'>
+178Mi
+</td><td align='center'>
+2.7Gi
+</td><td align='center'>
+
+</td><td align='center'>
+
+</td><td align='center'>
+
+</td></tr>
+</table>
+Uso de sistema de archivos para HOST: <strong>testjacgaplk</strong><br>
+Última actualización: <strong>Wed Feb  2 15:05:33 UTC 2022</strong><br><br>
+<table class='table' border='1'>
+<thead class='thead-dark'>
+<tr>
+<th >Sistema de archivos</th>
+<th >Tamaño</th>
+<th >Uso %</th>
+</tr>
+</thead>
+<tr><td align='center'>
+tmpfs
+</td><td align='center'>
+198M
+</td><td align='center'>
+2%
+</td></tr>
+<tr><td align='center'>
+/dev/mapper/ubuntu--vg-ubuntu--lv
+</td><td align='center'>
+8.8G
+</td><td align='center'>
+51%
+</td></tr>
+<tr><td align='center'>
+tmpfs
+</td><td align='center'>
+989M
+</td><td align='center'>
+0%
+</td></tr>
+<tr><td align='center'>
+tmpfs
+</td><td align='center'>
+5.0M
+</td><td align='center'>
+0%
+</td></tr>
+<tr><td align='center'>
+/dev/sda2
+</td><td align='center'>
+974M
+</td><td align='center'>
+10%
+</td></tr>
+<tr><td align='center'>
+tmpfs
+</td><td align='center'>
+198M
+</td><td align='center'>
+1%
+</td></tr>
+</table>
+</body>
+</html>
